@@ -69,7 +69,7 @@ body {
   color: rgba(255,255,255,.7);
   background-color: #202020;
 }
-@media (min-width: 48rem) {
+@media (min-width: 64rem) {
   .sidebar {
     position: fixed;
     top: 0;
@@ -92,37 +92,57 @@ body {
   font-family: "Open Sans";
   font-weight: 300;
   font-size: 1.5rem;
-  border-bottom: 1px solid rgba(255,255,255,.2);
+  /*border-bottom: 1px solid rgba(255,255,255,.2);*/
   padding-bottom: 24px;
-  max-width: auto;
-  margin-bottom: 24px;
+  /*max-width: 10rem;*/
+  /*margin-left: auto;
+  margin-right: auto;*/
 }
+/*.sidebar-about h1:after {
+    content: ""
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: audo;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+}*/
 
 .sidebar-about  p {
     font-size: 0.875rem;
+    display: none;
+    border-top: 1px solid rgba(255,255,255,.2);
+    padding-top: 24px;
+
 }
 .sidebar-copywrite {
     font-size: 0.6rem;
+    display: none;
 }
 
 /* Sidebar nav */
 .sidebar-nav {
   padding-left: 0;
   list-style: none;
+  margin-top:24px;
+  border-top: 1px solid rgba(255,255,255,.2);
+
 }
 .sidebar-nav-item {
-  display: block;
+  display: inline;
   font-size: 0.75rem;
   padding: 5px 0;
 }
 .sidebar-nav-item a {
     color: rgba(255,255,255,.7);
+    transition:.5s;
+}
+.sidebar-nav-item a:hover {
+    color: rgba(255,255,255, 1);
+    text-decoration: none;
 }
 .first {
-    border-top: 1px solid rgba(255,255,255,.2);
     padding-top: 24px;
-    margin-top: 24px;
-    width: auto;
+    /*margin-top: 24px;*/
+    /*width: auto;*/
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
@@ -138,13 +158,22 @@ a.sidebar-nav-item:focus {
  * contents to the bottom of the sidebar in tablets and up.
  */
 
-@media (min-width: 48rem) {
+@media (min-width: 64rem) {
   .sidebar-sticky {
     position: absolute;
     right:  1rem;
     bottom: 1rem;
     left:   1rem;
   }
+  .sidebar-about  p {
+    display: block;
+  }
+  .sidebar-copywrite {
+      display: block;
+  }
+  .sidebar-nav-item {
+    display: block;
+    }
 }
 
 /* Posts
@@ -169,6 +198,38 @@ a.sidebar-nav-item:focus {
 /* tags in the post */
 .post-tags {
     list-style-type: none;
+     /*display: inline;*/
+     margin-top: 48px;
+     padding: 0;
+}
+.post-tags li {
+    display: inline;
+    padding: 0px 6px 0px 8px;
+    /*border: 1px solid #c2c2c2;*/
+    /*border-radius: 3px;*/
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+.post-tags li a {
+    color: #adadad;
+    transition: 0.5s;
+}
+.post-tags li:hover {
+    /*border: 1px solid #9d9d9d;*/
+}
+.post-tags li a:hover {
+    color: #3d3d3d;
+}
+.post-footer {
+    color: #adadad;
+    padding-top: 24px;
+    /*border-top: 1px solid #efefef;*/
+    margin-top: 24px
+    text-transform: uppercase;
+    font-size: 0.75rem;
 }
 
 
@@ -183,7 +244,7 @@ a.sidebar-nav-item:focus {
   padding-bottom: 4rem;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 64rem) {
   .content {
     max-width: 62rem;
     margin-left: 20rem;

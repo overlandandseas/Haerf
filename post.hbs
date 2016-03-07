@@ -1,9 +1,27 @@
 {{!< default}}
 
 {{#post}}
-<div class="post">
-  <h1 class="post-title">{{{title}}}</h1>
-  <span class="post-date">{{date format="YYYY-MM-DD"}}</span>
-  {{content}}
+<div class="post posts-text-post">
+    <h1 class="post-title">
+        <!-- <a href="{{url}}"> -->
+            {{{title}}}
+        <!-- </a> -->
+    </h1>
+
+    <!-- <span class="post-date">{{date format='YYYY-MM-DD'}}</span> -->
+
+    {{content}}
+    <ul class="post-tags">
+        {{#foreach tags}}
+        <li>
+            <a href="{{url}}" title="{{name}}" class="tag-{{id}}">{{name}}</a>
+        </li>
+        {{/foreach}}
+    </ul>
+    <div class="post-footer">
+    <a href="{{url}}">
+        <span class="meta-count">{{date published_at timeago="true"}}</span>
+    </a>
+    </div>
 </div>
 {{/post}}

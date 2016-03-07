@@ -51,6 +51,9 @@ html {
     font-size: 17px;
   }
 }
+body {
+    background: url('../images/concrete_seamless.png')
+}
 
 
 /*
@@ -150,17 +153,22 @@ a.sidebar-nav-item:focus {
  */
 .posts-text-post {
     /*border: 1px #ccc solid;*/
-    /*background-color: */
+    background-color: #f9f9f9;
     border-radius: 5px;
-    padding: 56px;
-    border: 1px solid #eee;
-    /*box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px;*/
+    padding: 75px 56px 56px 56px;
+    /*border: 1px solid #eee;*/
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px;
 }
 .post-title {
     margin-bottom: 46px;
 }
 .posts-text-post a:hover {
     text-decoration: none;
+}
+
+/* tags in the post */
+.post-tags {
+    list-style-type: none;
 }
 
 
@@ -171,13 +179,13 @@ a.sidebar-nav-item:focus {
  */
 
 .content {
-  padding-top:    4rem;
+  padding-top:    5rem;
   padding-bottom: 4rem;
 }
 
 @media (min-width: 48rem) {
   .content {
-    max-width: 54rem;
+    max-width: 62rem;
     margin-left: 20rem;
     margin-right: 2rem;
   }

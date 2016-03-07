@@ -1,6 +1,9 @@
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
+        {{#if @blog.logo}}
+        <img src="{{@blog.logo}}" />
+        {{/if}}
       <h1>{{@blog.title}}</h1>
       <p class="lead">{{@blog.description}}</p>
     </div>
@@ -8,5 +11,7 @@
     {{navigation}}
 
     <p class="sidebar-copywrite">&copy; {{date format='YYYY'}}. All rights reserved.</p>
+    <!-- SnapWidget -->
+<!-- <iframe src="http://snapwidget.com/in/?u=b3ZlcmxhbmRhbmRzZWFzfGlufDEyNXwyfDN8fG5vfDV8bm9uZXxvblN0YXJ0fG5vfG5v&ve=060316" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:260px; height:390px"></iframe> -->
   </div>
 </div>

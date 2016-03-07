@@ -1,4 +1,4 @@
-Heidi
+Haerf
 =====
 
-Heidi is a port of Mark Otto's Hyde theme (of Jekyll fame) to Ghost.
+Haerf is a theme that is adapted from Heidi. Which is a adaptation of the hyde theme from jekyll.

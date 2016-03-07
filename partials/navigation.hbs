@@ -1,0 +1,14 @@
+<ul class="sidebar-nav">
+        {{#foreach navigation}}
+            {{#if @first}}
+                <li class="sidebar-nav-item first">
+            {{else}}
+                <li class="sidebar-nav-item">
+            {{/if}}
+            <a href="{{url absolute="true"}}">
+                {{label}}
+            </a>
+        </li>
+        {{/foreach}}
+        <!-- End the loop -->
+    </ul>

@@ -2,15 +2,18 @@
 
 <div class="posts">
     {{#foreach posts}}
-    <div class="post posts-text-post">
+    {{#has tag="tweet"}}
+    <div class="post animated slideInUp">
+        {{content}}
+    </div>
+    {{else}}
+    <div class="post posts-text-post animated slideInUp">
         <h1 class="post-title">
             <a href="{{url}}">
                 {{{title}}}
             </a>
         </h1>
-
         <!-- <span class="post-date">{{date format='YYYY-MM-DD'}}</span> -->
-
         {{content words="50"}}
         <ul class="post-tags">
             {{#foreach tags}}
@@ -25,6 +28,7 @@
         </a>
         </div>
     </div>
+    {{/has}}
     {{/foreach}}
     {{pagination}}
 </div>

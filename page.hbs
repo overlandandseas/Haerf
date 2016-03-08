@@ -1,8 +1,27 @@
 {{!< default}}
 
 {{#post}}
-<div class="page">
-  <h1 class="page-title">{{{title}}}</h1>
-  {{content}}
+<div class="page posts-text-post">
+    <h1 class="post-title animated slideInUp">
+        <a href="{{url}}">
+            {{{title}}}
+        </a>
+    </h1>
+    <!-- <span class="post-date">{{date format='YYYY-MM-DD'}}</span> -->
+    <div class="animated fadeIn">
+        {{content}}
+    </div>
+    <ul class="post-tags">
+        {{#foreach tags}}
+        <li>
+            <a href="{{url}}" title="{{name}}" class="tag-{{id}}">{{name}}</a>
+        </li>
+        {{/foreach}}
+    </ul>
+    <!-- <div class="post-footer">
+    <a href="{{url}}">
+        <span class="meta-count">{{date published_at timeago="true"}}</span>
+    </a>
+    </div> -->
 </div>
 {{/post}}

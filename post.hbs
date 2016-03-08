@@ -2,13 +2,14 @@
 
 {{#post}}
 <div class="post posts-text-post">
-    <h1 class="post-title">
+    <h1 class="post-title animated fadeInUp">
         {{{title}}}
     </h1>
 
     <!-- <span class="post-date">{{date format='YYYY-MM-DD'}}</span> -->
-
-    {{content}}
+    <div class="animated fadeIn">
+        {{content}}
+    </div>
     <ul class="post-tags">
         {{#foreach tags}}
         <li>

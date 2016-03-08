@@ -180,6 +180,10 @@ a.sidebar-nav-item:focus {
     padding: 75px 56px 56px 56px;
     /*border: 1px solid #eee;*/
 }
+.give-shadow {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px;
+    /*boder-radius: 5px;*/
+}
 .post-title {
     margin-bottom: 46px;
 }
